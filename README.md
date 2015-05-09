@@ -8,9 +8,7 @@ The following files are included in this repository:
 
 * __README.md__
 
-	Overall description of the project repository and files. 
-	
-	Instructions from the original README.md file (Introduction - Loading the data - Making plots).
+	Overall description of the project repository and files, followed by the instructions. 
 * __plot1.R__
 	
 	Script in R that reads the necessary data, constructs the first plot and saves it to file. 
@@ -38,8 +36,8 @@ The following files are included in this repository:
 
 
 
-<HR> 
-  
+Instructions
+============
   
 ## Introduction
 
