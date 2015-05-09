@@ -9,6 +9,7 @@ The following files are included in this repository:
 * __README.md__
 
 	Overall description of the project repository and files. 
+	
 	Instructions from the original README.md file (Introduction - Loading the data - Making plots).
 * __plot1.R__
 	
@@ -34,8 +35,11 @@ The following files are included in this repository:
 * __plot4.png__
 
   PNG file with 480x480 pixels containing the plot constructed and saved by the script plot4.R
- 
+
+
+
 <HR> 
+  
   
 ## Introduction
 
