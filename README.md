@@ -1,3 +1,42 @@
+Exploratory Data Analysis Project 1
+===================================
+
+This is a project for the peer assessment activity in the __Exploratory Data Analysis__ course provided by Johns Hopkins University through Coursera. 
+The purpose is to reconstruct four plots, all of them using the base plotting system in R.
+
+The following files are included in this repository:
+
+* __README.md__
+
+	Overall description of the project repository and files. 
+	Instructions from the original README.md file (Introduction - Loading the data - Making plots).
+* __plot1.R__
+	
+	Script in R that reads the necessary data, constructs the first plot and saves it to file. 
+* __plot1.png__
+
+  PNG file with 480x480 pixels containing the plot constructed and saved by the script plot1.R
+* __plot2.R__
+	
+	Script in R that reads the necessary data, constructs the first plot and saves it to file. 
+* __plot2.png__
+
+  PNG file with 480x480 pixels containing the plot constructed and saved by the script plot2.R
+* __plot3.R__
+	
+	Script in R that reads the necessary data, constructs the first plot and saves it to file. 
+* __plot3.png__
+
+  PNG file with 480x480 pixels containing the plot constructed and saved by the script plot3.R
+* __plot4.R__
+	
+	Script in R that reads the necessary data, constructs the first plot and saves it to file. 
+* __plot4.png__
+
+  PNG file with 480x480 pixels containing the plot constructed and saved by the script plot4.R
+ 
+<HR> 
+  
 ## Introduction
 
 This assignment uses data from
