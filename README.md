@@ -34,7 +34,7 @@ The following files are included in this repository:
 
   PNG file with 480x480 pixels containing the plot constructed and saved by the script plot4.R
 
-<BR><BR>
+<BR>
 
 Instructions
 ============
