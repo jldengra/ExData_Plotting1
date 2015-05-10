@@ -56,16 +56,16 @@ table(nchar(data$Date))
 #      8       9      10 
 # 466560 1249920  358779 
 
-# So the strings value for date are not equally sized and formatted. It 
-# seems that sometimes they appear with only a number D or M for month.
-# The dates 2007-02-01 and 2007-02-02 must be then denoted as "1/2/2007"
-# and "2/2/2007". Let's check this and subset by them. 
+# So the string values for date are not equally sized and formatted. It 
+# seems that sometimes they appear with only a number D for day or M for 
+# month. The dates 2007-02-01 and 2007-02-02 must be then denoted as
+# "1/2/2007" and "2/2/2007". Let's check this and subset by them. 
 
 table(data$Date[data$Date == "1/2/2007" | data$Date == "2/2/2007"])
 # 1/2/2007 2/2/2007 
 #     1440     1440 
 
-# As expected, the dates of interest are formatred as as "1/2/2007"
+# As expected, the dates of interest are formatted as "1/2/2007"
 # and "2/2/2007" in our data set, so we can subset by these values.
 
 data <- subset(data, Date == "1/2/2007" | Date == "2/2/2007")
