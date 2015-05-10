@@ -35,6 +35,7 @@ data <- read.csv("./data/household_power_consumption.txt", header = TRUE,
                  sep = ';', na.strings = "?", stringsAsFactors = FALSE)
 
 # Let's check the structure of the data frame
+
 str(data)
 'data.frame':        2075259 obs. of  9 variables:
 # $ Date                 : chr  "16/12/2006" "16/12/2006" "16/12/2006" "16/12/2006" ...
@@ -50,8 +51,9 @@ str(data)
 # The sampled values of Date are strings with the format "DD/MM/YYYY", 
 # with a fixed length of 10. Let's check if this applies to the rest of
 # observations.
+
 table(nchar(data$Date))
-# 8       9      10 
+#      8       9      10 
 # 466560 1249920  358779 
 
 # So the strings value for date are not equally sized and formatted. It 
@@ -65,6 +67,7 @@ table(data$Date[data$Date == "1/2/2007" | data$Date == "2/2/2007"])
 
 # As expected, the dates of interest are formatred as as "1/2/2007"
 # and "2/2/2007" in our data set, so we can subset by these values.
+
 data <- subset(data, Date == "1/2/2007" | Date == "2/2/2007")
 
 # Looking at the plots that we need to reconstruct, three of them
@@ -78,6 +81,7 @@ data$fulldate <- dmy_hms(paste(data$Date, data$Time))
 
 # Let's remove the variables Date and Time from our data frame
 # since they are no longer needed
+
 data <- data[ , !(names(data) %in% c("Date", "Time"))]
 
 
@@ -91,5 +95,6 @@ hist(data$Global_active_power, col = "red", main = "Global Active Power",
 # 4. Save and name the resulting plot file as plot1.png
 
 # We can do it just copying the plot to a PNG device and closing it
-dev.copy(png, file = "plot1.png", height = 480, width = 480)
+
+dev.copy(png, file = "plot1.png", width = 480, height = 480)
 dev.off()
