@@ -55,7 +55,8 @@ with (data, {plot(Sub_metering_1 ~ fulldate, type = "l",
             lines(Sub_metering_3 ~ fulldate, col = "blue")})
 legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", 
                               "Sub_metering_3"),
-       col = c("black", "red", "blue"), lty = 1, lwd = 2)
+       col = c("black", "red", "blue"), lty = 1, lwd = 2, 
+       text.width = 74000)
 
 # 4. Save and name the resulting plot file as plot1.png
 
