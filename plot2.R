@@ -32,10 +32,10 @@ if (!file.exists("./data/household_power_consumption.txt")){
 # 2. Load the data from the dates 2007-02-01 and 2007-02-02 
 #    like in plot1.R (more comments and details in that script)
 
-data <- read.csv("./data/household_power_consumption.txt", header = T, sep = ';', 
-                 na.strings = "?", stringsAsFactors = FALSE)
+data <- read.csv("./data/household_power_consumption.txt", header = TRUE, 
+                 sep = ';', na.strings = "?", stringsAsFactors = FALSE)
 data <- subset(data, Date == "1/2/2007" | Date == "2/2/2007")
-library(lubridate)
+library(lubridate)RU
 data$fulldate <- dmy_hms(paste(data$Date, data$Time))
 data <- data[ , !(names(data) %in% c("Date", "Time"))]
 
