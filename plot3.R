@@ -49,14 +49,16 @@ data <- data[ , !(names(data) %in% c("Date", "Time"))]
 Sys.setlocale("LC_TIME", "English")
 # [1] "English_United States.1252"
 
+par(mfrow = c(1, 1), mar = c(5, 4, 3, 2))
 with (data, {plot(Sub_metering_1 ~ fulldate, type = "l",
-                 ylab = "Energy sub metering", xlab = "")      
+                 ylab = "Energy sub metering", xlab = "", 
+                 cex.lab = .8, cex.axis = .8)      
             lines(Sub_metering_2 ~ fulldate, col = "red")
             lines(Sub_metering_3 ~ fulldate, col = "blue")})
 legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", 
                               "Sub_metering_3"),
-       col = c("black", "red", "blue"), lty = 1, lwd = 2, 
-       text.width = 57000)
+       col = c("black", "red", "blue"), lty = 1, lwd = 1, 
+       text.width = 45000, cex = .72)
 
 # 4. Save and name the resulting plot file as plot3.png
 
