@@ -48,7 +48,7 @@ data <- data[ , !(names(data) %in% c("Date", "Time"))]
 Sys.setlocale("LC_TIME", "English")
 # [1] "English_United States.1252"
 
-par(mfrow = c(1, 1), mar = c(4, 4, 3, 1.8))
+par(mfrow = c(1, 1), mar = c(4, 4, 3.25, 1.8))
 with (data, plot(Global_active_power ~ fulldate, type = "l",
                  xlab = "", ylab = "Global Active Power (kilowatts)",  
                  cex.lab = .75, cex.axis = .75))
