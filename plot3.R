@@ -3,7 +3,7 @@
 ###########################################
 
 # Plot3.R
-# This script performs the following actions for the second plot: 
+# This script performs the following actions for the third plot: 
 # 
 # 1. Download and unzip the data file (only when necessary). 
 # 2. Load the data from the dates 2007-02-01 and 2007-02-02.
