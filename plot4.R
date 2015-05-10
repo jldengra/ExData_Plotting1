@@ -53,7 +53,7 @@ par(mfrow = c(2, 2), mar = c(4, 4, 2, 1), oma = c(0, 0, 0, 0))
 with(data, { plot(Global_active_power ~ fulldate, type = "l", 
                   ylab = "Global Active Power", xlab = "")
              plot(Voltage ~ fulldate, type  = "l", 
-                  ylab = "Voltage", xlab = "datetime")
+                  xlab = "datetime", ylab = "Voltage")
              plot(Sub_metering_1 ~ fulldate, type = "l",
                   ylab = "Energy sub metering", xlab = "")      
              lines(Sub_metering_2 ~ fulldate, col = "red")
@@ -63,7 +63,7 @@ with(data, { plot(Global_active_power ~ fulldate, type = "l",
                     col = c("black", "red", "blue"), lty = 1, lwd = 2, 
                     text.width = 80000, cex = .8, bty = "n")
              plot(Global_reactive_power ~ fulldate, type = "l", 
-             ylab = "Global_Reactive_Power",xlab = "datetime") })
+                  xlab = "datetime", ylab = "Global_Reactive_Power") })
 
 # 4. Save and name the resulting plot file as plot4.png
 
