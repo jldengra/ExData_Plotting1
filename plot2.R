@@ -9,7 +9,7 @@
 # 2. Load the data from the dates 2007-02-01 and 2007-02-02.
 # 3. Construct the plot and save it to a PNG file with a width of 480 pixels 
 #    and a height of 480 pixels.
-# 4. Save and name the resulting plot file as plot2.png
+# 4. Save and name the resulting plot file as plot2.png.
 
 
 # 1. Download and unzip the data file (only when necessary). 
