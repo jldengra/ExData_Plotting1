@@ -88,8 +88,10 @@ data <- data[ , !(names(data) %in% c("Date", "Time"))]
 # 3. Construct the plot and save it to a PNG file with a width of 480 pixels 
 #    and a height of 480 pixels.
 
+par(mfrow = c(1, 1), mar = c(4.5, 4, 3, 1.8))
 hist(data$Global_active_power, col = "red", main = "Global Active Power", 
-     xlab = "Global Active Power (kilowatts)", ylab = "Frequency")
+     xlab = "Global Active Power (kilowatts)", ylab = "Frequency", 
+     cex.lab = .75, cex.axis = .75, cex.main = .9)
 
 
 # 4. Save and name the resulting plot file as plot1.png
