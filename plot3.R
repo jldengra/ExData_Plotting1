@@ -7,9 +7,8 @@
 # 
 # 1. Download and unzip the data file (only when necessary). 
 # 2. Load the data from the dates 2007-02-01 and 2007-02-02.
-# 3. Construct the plot and save it to a PNG file with a width of 480 pixels 
-#    and a height of 480 pixels.
-# 4. Save and name the resulting plot file as plot3.png
+# 3. Construct and customize the plot.
+# 4. Save it to a PNG file with a width of 480 pixels and a height of 480 pixels.
 
 
 # 1. Download and unzip the data file (only when necessary). 
@@ -29,6 +28,7 @@ if (!file.exists("./data/household_power_consumption.txt")){
         unlink("./data/data.zip")
 }
 
+
 # 2. Load the data from the dates 2007-02-01 and 2007-02-02 
 #    like in plot1.R (more comments and details in that script)
 
@@ -40,8 +40,7 @@ data$fulldate <- dmy_hms(paste(data$Date, data$Time))
 data <- data[ , !(names(data) %in% c("Date", "Time"))]
 
 
-# 3. Construct the plot and save it to a PNG file with a width of 480 pixels 
-#    and a height of 480 pixels.
+# 3. Construct and customize the plot.
 
 # Since the locale in my system is not English, I need to set it before
 # drawing to make the week days appear in English
@@ -49,7 +48,7 @@ data <- data[ , !(names(data) %in% c("Date", "Time"))]
 Sys.setlocale("LC_TIME", "English")
 # [1] "English_United States.1252"
 
-par(mfrow = c(1, 1), mar = c(5, 4, 3, 2))
+par(mfrow = c(1, 1), mar = c(4, 4, 3, 1.8))
 with (data, {plot(Sub_metering_1 ~ fulldate, type = "l",
                  ylab = "Energy sub metering", xlab = "", 
                  cex.lab = .8, cex.axis = .8)      
@@ -60,8 +59,7 @@ legend("topright", legend = c("Sub_metering_1", "Sub_metering_2",
        col = c("black", "red", "blue"), lty = 1, lwd = 1, 
        text.width = 45000, cex = .72)
 
-# 4. Save and name the resulting plot file as plot3.png
-
+# 4. Save it to a PNG file with a width of 480 pixels and a height of 480 pixels.
 # We can do it just copying the plot to a PNG device and closing it
 
 dev.copy(png, file = "plot3.png", width = 480, height = 480)
