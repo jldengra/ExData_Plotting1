@@ -28,6 +28,7 @@ if (!file.exists("./data/household_power_consumption.txt")){
         unlink("./data/data.zip")
 }
 
+
 # 2. Load the data from the dates 2007-02-01 and 2007-02-02.
 
 data <- read.csv("./data/household_power_consumption.txt", header = TRUE, 
@@ -36,7 +37,7 @@ data <- read.csv("./data/household_power_consumption.txt", header = TRUE,
 # Let's check the structure of the data frame
 
 str(data)
-'data.frame':        2075259 obs. of  9 variables:
+# 'data.frame':        2075259 obs. of  9 variables:
 # $ Date                 : chr  "16/12/2006" "16/12/2006" "16/12/2006" "16/12/2006" ...
 # $ Time                 : chr  "17:24:00" "17:25:00" "17:26:00" "17:27:00" ...
 # $ Global_active_power  : num  4.22 5.36 5.37 5.39 3.67 ...
