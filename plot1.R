@@ -68,11 +68,10 @@ table(data$Date[data$Date == "1/2/2007" | data$Date == "2/2/2007"])
 data <- subset(data, Date == "1/2/2007" | Date == "2/2/2007")
 
 # Looking at the plots that we need to reconstruct, three of them
-# need the day of week of Date. In order to be able to compute 
-# weekdays(Date), Date should be a date instead of a string. But if 
-# we consider that there are different time zones, Time should also 
-# be included when computing the day of week. Let's combine Date
-# and Time to add a date variable called "fulldate".
+# will need to estimate the day of week of Date, so Date should be 
+# a date instead of a string. As there are different time zones, Time 
+# should also be included when computing the day of week. Let's combine
+# Date and Time to add a date variable called "fulldate".
 
 library(lubridate)
 data$fulldate <- dmy_hms(paste(data$Date, data$Time))
