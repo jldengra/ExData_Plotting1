@@ -31,8 +31,8 @@ if (!file.exists("./data/household_power_consumption.txt")){
 
 # 2. Load the data from the dates 2007-02-01 and 2007-02-02.
 
-data <- read.csv("./data/household_power_consumption.txt", header = T, sep = ';', 
-                 na.strings = "?", stringsAsFactors = FALSE)
+data <- read.csv("./data/household_power_consumption.txt", header = TRUE, 
+                 sep = ';', na.strings = "?", stringsAsFactors = FALSE)
 
 # Let's check the structure of the data frame
 str(data)
