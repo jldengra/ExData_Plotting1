@@ -11,25 +11,25 @@ The following files are included in this repository:
 	Overall description of the project repository and files, followed by the instructions. 
 * __plot1.R__
 	
-	Script in R that reads the necessary data, constructs the first plot and saves it to file. 
+	Script in R that reads the necessary data, constructs the first plot and saves it to a file. 
 * __plot1.png__
 
   PNG file with 480x480 pixels containing the plot constructed and saved by the script plot1.R
 * __plot2.R__
 	
-	Script in R that reads the necessary data, constructs the second plot and saves it to file. 
+	Script in R that reads the necessary data, constructs the second plot and saves it to a file. 
 * __plot2.png__
 
   PNG file with 480x480 pixels containing the plot constructed and saved by the script plot2.R
 * __plot3.R__
 	
-	Script in R that reads the necessary data, constructs the third plot and saves it to file. 
+	Script in R that reads the necessary data, constructs the third plot and saves it to a file. 
 * __plot3.png__
 
   PNG file with 480x480 pixels containing the plot constructed and saved by the script plot3.R
 * __plot4.R__
 	
-	Script in R that reads the necessary data, constructs the fourth plot and saves it to file. 
+	Script in R that reads the necessary data, constructs the fourth plot and saves it to a file. 
 * __plot4.png__
 
   PNG file with 480x480 pixels containing the plot constructed and saved by the script plot4.R
