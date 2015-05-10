@@ -35,7 +35,7 @@ if (!file.exists("./data/household_power_consumption.txt")){
 data <- read.csv("./data/household_power_consumption.txt", header = TRUE, 
                  sep = ';', na.strings = "?", stringsAsFactors = FALSE)
 data <- subset(data, Date == "1/2/2007" | Date == "2/2/2007")
-library(lubridate)RU
+library(lubridate)
 data$fulldate <- dmy_hms(paste(data$Date, data$Time))
 data <- data[ , !(names(data) %in% c("Date", "Time"))]
 
