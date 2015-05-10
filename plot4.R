@@ -7,9 +7,8 @@
 # 
 # 1. Download and unzip the data file (only when necessary). 
 # 2. Load the data from the dates 2007-02-01 and 2007-02-02.
-# 3. Construct the plot and save it to a PNG file with a width of 480 pixels 
-#    and a height of 480 pixels.
-# 4. Save and name the resulting plot file as plot4.png
+# 3. Construct and customize the plot.
+# 4. Save it to a PNG file with a width of 480 pixels and a height of 480 pixels.
 
 
 # 1. Download and unzip the data file (only when necessary). 
@@ -40,8 +39,7 @@ data$fulldate <- dmy_hms(paste(data$Date, data$Time))
 data <- data[ , !(names(data) %in% c("Date", "Time"))]
 
 
-# 3. Construct the plot and save it to a PNG file with a width of 480 pixels 
-#    and a height of 480 pixels.
+# 3. Construct and customize the plot.
 
 # Since the locale in my system is not English, I need to set it before
 # drawing to make the week days appear in English
@@ -49,24 +47,27 @@ data <- data[ , !(names(data) %in% c("Date", "Time"))]
 Sys.setlocale("LC_TIME", "English")
 # [1] "English_United States.1252"
 
-par(mfrow = c(2, 2), mar = c(4, 4, 2, 1), oma = c(0, 0, 0, 0))
+par(mfrow = c(2, 2), mar = c(4.5, 4, 3.6, 1.8))
 with(data, { plot(Global_active_power ~ fulldate, type = "l", 
-                  ylab = "Global Active Power", xlab = "")
+                  xlab = "", ylab = "Global Active Power", 
+                  cex.lab = .75, cex.axis = .75)
              plot(Voltage ~ fulldate, type  = "l", 
-                  xlab = "datetime", ylab = "Voltage")
+                  xlab = "datetime", ylab = "Voltage", 
+                  cex.lab = .75, cex.axis = .75)
              plot(Sub_metering_1 ~ fulldate, type = "l",
-                  ylab = "Energy sub metering", xlab = "")      
+                  xlab = "", ylab = "Energy sub metering", 
+                  cex.lab = .75, cex.axis = .75)      
              lines(Sub_metering_2 ~ fulldate, col = "red")
              lines(Sub_metering_3 ~ fulldate, col = "blue")
              legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", 
                                            "Sub_metering_3"),
                     col = c("black", "red", "blue"), lty = 1, lwd = 2, 
-                    text.width = 80000, cex = .8, bty = "n")
+                    text.width = 89000, cex = .75, bty = "n")
              plot(Global_reactive_power ~ fulldate, type = "l", 
-                  xlab = "datetime", ylab = "Global_Reactive_Power") })
+                  xlab = "datetime", ylab = "Global_reactive_power", 
+                  cex.lab = .75, cex.axis = .75) })
 
-# 4. Save and name the resulting plot file as plot4.png
-
+# 4. Save it to a PNG file with a width of 480 pixels and a height of 480 pixels.
 # We can do it just copying the plot to a PNG device and closing it
 
 dev.copy(png, file = "plot4.png", width = 480, height = 480)
