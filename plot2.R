@@ -9,7 +9,7 @@
 # 2. Load the data from the dates 2007-02-01 and 2007-02-02.
 # 3. Construct the plot and save it to a PNG file with a width of 480 pixels 
 #    and a height of 480 pixels.
-# 4. Save and name the resulting plot file as plot1.png
+# 4. Save and name the resulting plot file as plot2.png
 
 
 # 1. Download and unzip the data file (only when necessary). 
@@ -45,15 +45,17 @@ data <- data[ , !(names(data) %in% c("Date", "Time"))]
 
 # Since the locale in my system is not English, I need to set it before
 # drawing to make the week days appear in English
+
 Sys.setlocale("LC_TIME", "English")
 # [1] "English_United States.1252"
 
 with (data, plot(Global_active_power ~ fulldate, type = "l",
-     ylab = "Global Active Power (kilowatts)", xlab = ""))
+                 ylab = "Global Active Power (kilowatts)", xlab = ""))
 
 
 # 4. Save and name the resulting plot file as plot1.png
 
 # We can do it just copying the plot to a PNG device and closing it
-dev.copy(png, file = "plot2.png", height = 480, width = 480)
+
+dev.copy(png, file = "plot2.png", width = 480, height = 480)
 dev.off()
