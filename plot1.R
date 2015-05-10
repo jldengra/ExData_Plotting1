@@ -7,9 +7,8 @@
 # 
 # 1. Download and unzip the data file (only when necessary). 
 # 2. Load the data from the dates 2007-02-01 and 2007-02-02.
-# 3. Construct the plot and save it to a PNG file with a width of 480 pixels 
-#    and a height of 480 pixels.
-# 4. Save and name the resulting plot file as plot1.png
+# 3. Construct and customize the plot.
+# 4. Save it to a PNG file with a width of 480 pixels and a height of 480 pixels.
 
 
 # 1. Download and unzip the data file (only when necessary). 
@@ -85,8 +84,7 @@ data$fulldate <- dmy_hms(paste(data$Date, data$Time))
 data <- data[ , !(names(data) %in% c("Date", "Time"))]
 
 
-# 3. Construct the plot and save it to a PNG file with a width of 480 pixels 
-#    and a height of 480 pixels.
+# 3. Construct and customize the plot.
 
 par(mfrow = c(1, 1), mar = c(4.5, 4, 3, 1.8))
 hist(data$Global_active_power, col = "red", main = "Global Active Power", 
@@ -94,8 +92,7 @@ hist(data$Global_active_power, col = "red", main = "Global Active Power",
      cex.lab = .75, cex.axis = .75, cex.main = .9)
 
 
-# 4. Save and name the resulting plot file as plot1.png
-
+# 4. Save it to a PNG file with a width of 480 pixels and a height of 480 pixels.
 # We can do it just copying the plot to a PNG device and closing it
 
 dev.copy(png, file = "plot1.png", width = 480, height = 480)
