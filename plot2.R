@@ -53,7 +53,7 @@ with (data, plot(Global_active_power ~ fulldate, type = "l",
                  ylab = "Global Active Power (kilowatts)", xlab = ""))
 
 
-# 4. Save and name the resulting plot file as plot1.png
+# 4. Save and name the resulting plot file as plot2.png
 
 # We can do it just copying the plot to a PNG device and closing it
 
